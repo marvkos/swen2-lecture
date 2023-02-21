@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.technikum.helloworld.ProjectController">
+
+    <MenuBar>
+        <Menu text="File" />
+        <Menu text="Edit" />
+        <Menu text="Options" />
+    </MenuBar>
+
+    <HBox>
+        <TextField promptText="search tours" prefHeight="26.0" prefWidth="525.0" />
+        <Button text="search" />
+    </HBox>
+
+
+    <HBox>
+        <VBox>
+            <HBox>
+                <Label text="Tours" />
+                <Button text="+" onAction="#addDummyTour" />
+                <Button text="-" onAction="#deleteSelectedTour" />
+            </HBox>
+            <ListView fx:id="tourList"/>
+        </VBox>
+
+        <VBox>
+            <TabPane prefWidth="248.0">
+                <Tab closable="false" text="General">
+                    <Label text="General information" />
+                </Tab>
+                <Tab closable="false" text="Route">
+                    <ImageView  />
+                </Tab>
+            </TabPane>
+            <HBox prefWidth="248.0">
+                <Label text="Logs" />
+                <Button text="+" />
+                <Button text="-" />
+            </HBox>
+            <TableView prefHeight="249.0" prefWidth="248.0">
+
+            </TableView>
+        </VBox>
+    </HBox>
+
+</VBox>
